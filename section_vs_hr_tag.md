@@ -33,7 +33,12 @@
 ---
 
 ## 3. Usage Examples
-<!-- Using section to semantically structure content --> <article> <section> <h2>Introduction</h2> <p>Welcome to the topic.</p> </section> <section> <h2>Details</h2> <p>Important details here.</p> </section> </article> <!-- Using hr for visual separation --> <p>Contact the author below.</p> <hr> <p>Name: Kiran V K</p> ```
+
+
+```
+<!-- Using section to semantically structure content --> <article> <section> <h2>Introduction</h2> <p>Welcome to the topic.</p> </section> <section> <h2>Details</h2> <p>Important details here.</p> </section> </article> <!-- Using hr for visual separation --> <p>Contact the author below.</p> <hr> <p>Name: Kiran V K</p>
+
+ ```
 4. Key Points
 Use <section> when you want to thematically group content in a meaningful, machine-readable way.
 
