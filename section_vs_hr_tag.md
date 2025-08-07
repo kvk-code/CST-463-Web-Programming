@@ -1,3 +1,6 @@
+
+---
+
 # Section (`<section>`) vs Horizontal Rule (`<hr>`) Tag in HTML
 
 ---
@@ -8,7 +11,7 @@
   - *Semantic element*: Groups related content into logical, thematic blocks.
   - Gives meaning to both browsers and assistive technologies (screen readers, search engines).
   - Used for chapters, introductions, discrete topics, or logical groupings within a page or article.
-  - Usually begins with a heading (`<h1>–<h6>`).
+  - Usually begins with a heading (`<h1>`–`<h6>`).
   - **Example**: Splitting an article into "Introduction", "Methods", and "Conclusion".
 
 - **`<hr>`**
@@ -34,14 +37,31 @@
 
 ## 3. Usage Examples
 
+```html
+<!-- Using section to semantically structure content -->
+<article>
+  <section>
+    <h2>Introduction</h2>
+    <p>Welcome to the topic.</p>
+  </section>
+  <section>
+    <h2>Details</h2>
+    <p>Important details here.</p>
+  </section>
+</article>
 
+<!-- Using hr as a visual separator -->
+<p>Author: Jane Doe</p>
+<hr>
+<p>Main article content starts here...</p>
 ```
-<!-- Using section to semantically structure content --> <article> <section> <h2>Introduction</h2> <p>Welcome to the topic.</p> </section> <section> <h2>Details</h2> <p>Important details here.</p> </section> </article> <!-- Using hr for visual separation --> <p>Contact the author below.</p> <hr> <p>Name: Kiran V K</p>
 
- ```
-4. Key Points
-Use <section> when you want to thematically group content in a meaningful, machine-readable way.
+---
 
-Use <hr> to visually signal a break or shift in content without affecting the semantic structure of your page.
+## 4. Key Points
 
-Combining both: Place <hr> inside or between <section>s to provide both semantic grouping and visual clarity.
+- Use `<section>` when you want to thematically group content in a meaningful, machine-readable way.
+- Use `<hr>` to visually signal a break or shift in content without affecting the semantic structure of your page.
+- Combining both: Place `<hr>` inside or between `<section>`s to provide both semantic grouping and visual clarity.
+
+---
