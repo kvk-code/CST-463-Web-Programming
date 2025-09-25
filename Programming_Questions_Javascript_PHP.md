@@ -117,10 +117,23 @@ Create an HTML page with JavaScript that:
 
 ### Question 5: Control Statements Demo
 Write JavaScript code demonstrating:
-- if-else statements for grade calculation (A, B, C, D, F)
-- for loop for displaying number sequences
-- while loop for user input validation
-- switch statement for menu selection (calculator operations)
+
+#### a) If-Else Statements for Grade Calculation (A, B, C, D, F)
+Prompt the user for a numeric grade (0–100), validate input, and display the corresponding letter grade:
+- A: 90–100
+- B: 80–89
+- C: 70–79
+- D: 60–69
+- F: below 60
+
+#### b) For Loop for Displaying Number Sequences
+Use a for loop to display numbers from 1 to 10 (or any specified range) in sequence, separated by spaces or in a list format.
+
+#### c) While Loop for User Input Validation
+Continuously prompt the user to enter a positive integer. If the input is invalid (not a number or not positive), repeat the prompt until valid input is received, then display the accepted value.
+
+#### d) Switch Statement for Menu Selection (Calculator Operations)
+Show a menu with prompt: "Choose operation: 1-Add, 2-Subtract, 3-Multiply, 4-Divide". Accept user choice, prompt for two numbers, and perform the selected operation using a switch statement. Display the result or an error message for invalid choices.
 
 ### Question 6: Square Display Program
 Write a JavaScript program that:
@@ -134,24 +147,29 @@ Write a JavaScript program that:
 Write separate PHP programs for:
 
 #### a) Prime Number Checker
-- Create HTML form to input a number
-- PHP script to check if number is prime
-- Display result with appropriate message
+- Hardcode a test number (e.g., $number = 17;) in your PHP script
+- Create a function to check if the number is prime
+- Display the number being tested and the result with appropriate message
+- Test with at least 3 different hardcoded values (prime and non-prime)
 
 #### b) Armstrong Number Validation
-- Program to check if given number is Armstrong number
-- Display detailed calculation steps
+- Hardcode a test number (e.g., $number = 153;) in your PHP script
+- Create a function to check if the number is Armstrong number
+- Display detailed calculation steps showing the sum of cubes
+- Test with both Armstrong and non-Armstrong numbers
 
 #### c) Palindrome Number Verification
-- Function to check if a number is palindrome
-- Test with multiple input values
+- Create a function to check if a number is palindrome
+- Hardcode an array of test values (e.g., $testNumbers = [121, 1331, 123, 7];)
+- Test each number and display results in a formatted table
 
-**Expected Form Structure:**
-```html
-<form method="POST" action="">
-    <input type="number" name="number" required>
-    <input type="submit" value="Check">
-</form>
+**Expected Output Structure:**
+```php
+<?php
+$number = 17; // Hardcoded test value
+echo "<h3>Testing number: $number</h3>";
+// Your validation logic here
+?>
 ```
 
 ### Question 2: Function Implementation
@@ -160,48 +178,83 @@ Create PHP functions for:
 #### a) Factorial Table Display
 ```php
 function factorial($n) {
-    // Calculate factorial
+    // Calculate factorial recursively or iteratively
 }
-// Display factorial of numbers 1-10 in HTML table
+// Hardcode range: Display factorial of numbers 1-10 in HTML table
+// Use a for loop to generate the table rows
 ```
 
 #### b) Sum Calculation with do-while
 ```php
-function calculateSum() {
-    // Sum of positive integers up to 100 using do-while
+function calculateSum($limit) {
+    // Sum of positive integers from 1 to $limit using do-while loop
+    // Hardcode $limit = 100 for testing
 }
+// Display the calculation process and final result
 ```
 
-#### c) User-defined Functions
-- Function with parameters and return values
+#### c) User-defined Functions Demonstration
+- Create a function `calculateArea($length, $width)` that returns area of rectangle
+- Create a function `greetUser($name, $age)` that displays personalized greeting
+- Hardcode test values: $length = 10, $width = 5, $name = "John", $age = 25
 - Demonstrate function calling and parameter passing
-- Show variable scope (local vs global)
+- Show variable scope by using both local and global variables
+
+**Expected Function Calls:**
+```php
+<?php
+$length = 10; $width = 5; // Global variables
+echo "Area: " . calculateArea($length, $width);
+
+$userName = "John"; $userAge = 25;
+greetUser($userName, $userAge);
+?>
+```
 
 ### Question 3: Advanced PHP Concepts
 Write PHP programs demonstrating:
 
 #### a) Array Comparison with C
-- Explain differences between PHP arrays and C arrays
-- Show dynamic sizing capabilities
-- Demonstrate mixed data types in PHP arrays
+- Create a PHP program that demonstrates PHP array flexibility vs C arrays
+- Hardcode examples showing:
+  - Dynamic array sizing: `$arr = []; $arr[] = 1; $arr[] = "text";`
+  - Mixed data types in single array: `$mixed = [1, "hello", 3.14, true];`
+  - Associative arrays: `$student = ["name" => "John", "grade" => 85];`
+- Display each array with explanatory comments about how this differs from C
 
-#### b) Type Casting
+#### b) Type Casting Demonstration
 ```php
-// Demonstrate conversion between different data types
-$string = "123";
-$integer = (int)$string;
-$float = (float)$string;
+<?php
+// Hardcode test values and demonstrate all conversions
+$originalString = "123.45abc";
+$originalInt = 42;
+$originalFloat = 3.14159;
+$originalBool = true;
+
+// Show conversion between different data types
+$stringToInt = (int)$originalString;
+$stringToFloat = (float)$originalString;
+$intToString = (string)$originalInt;
+$floatToInt = (int)$originalFloat;
+// Display original values, converted values, and their types using gettype()
+?>
 ```
 
 #### c) Array Creation Methods
-Show different ways to create arrays:
+Show different ways to create and populate arrays with hardcoded data:
 ```php
-// Indexed arrays
-$arr1 = array(1, 2, 3);
-$arr2 = [1, 2, 3];
+<?php
+// Indexed arrays - demonstrate 3 methods
+$fruits1 = array("apple", "banana", "orange");
+$fruits2 = ["apple", "banana", "orange"];
+$fruits3 = array();
+$fruits3[0] = "apple"; $fruits3[1] = "banana"; $fruits3[2] = "orange";
 
-// Associative arrays
-$arr3 = array("name" => "John", "age" => 25);
-$arr4 = ["name" => "John", "age" => 25);
+// Associative arrays - demonstrate 2 methods
+$student1 = array("name" => "John", "age" => 25, "grade" => "A");
+$student2 = ["name" => "John", "age" => 25, "grade" => "A"];
+
+// Display all arrays using print_r() and var_dump() to show differences
+?>
 ```
 
